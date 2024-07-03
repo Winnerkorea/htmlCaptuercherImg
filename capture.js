@@ -1,13 +1,13 @@
 function addInputGroup() {
   const inputContainer = document.getElementById("input-container");
   const newInputGroup = document.createElement("div");
-  newInputGroup.className = "input-group space-y-2 flex items-center gap-2";
+  newInputGroup.className = "input-group space-y-2 flex items-center";
   newInputGroup.innerHTML = `
-        <input type="checkbox" class="delete-checkbox mr-2">
-        <input type="text" placeholder="URL을 입력하세요" class="url-input block w-full p-2 border border-gray-300 rounded">
-        <input type="text" placeholder="텍스트 1" class="text-input block w-full p-2 border border-gray-300 rounded">
-        <input type="text" placeholder="텍스트 2" class="text-input block w-full p-2 border border-gray-300 rounded">
-    `;
+      <input type="checkbox" class="delete-checkbox mr-2">
+      <input type="text" placeholder="URL을 입력하세요" class="url-input block w-full p-2 border border-gray-300 rounded">
+      <input type="text" placeholder="텍스트 1" class="text-input block w-full p-2 border border-gray-300 rounded">
+      <input type="text" placeholder="텍스트 2" class="text-input block w-full p-2 border border-gray-300 rounded">
+  `;
   inputContainer.appendChild(newInputGroup);
 }
 
@@ -41,7 +41,7 @@ function captureImages() {
     } else {
       urlInput.classList.remove("border-red-500");
       const img = new Image();
-      img.crossOrigin = "Anonymous";
+      // img.crossOrigin = 'Anonymous'; // crossOrigin 속성 제거
       img.src = urlInput.value;
       img.onload = () => {
         const aspectRatio = img.width / img.height;

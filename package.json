@@ -1,0 +1,18 @@
+{
+  "name": "htmlcaptuercherimg",
+  "version": "1.0.0",
+  "description": "이미지를 캡쳐하는 프로그램입니다.",
+  "main": "capture.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "puppeteer": "^22.12.1"
+  }
+}
