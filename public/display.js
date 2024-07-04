@@ -39,19 +39,31 @@ function displayImages() {
       outputImage.style.width = "800px";
       outputImage.style.height = "600px";
 
+      const textContainer = document.createElement("div");
+      textContainer.className = "absolute text-center";
+      textContainer.style.top = "50%";
+      textContainer.style.left = "50%";
+      textContainer.style.transform = "translate(-50%, -50%)";
+      textContainer.style.color = "white";
+      textContainer.style.opacity = "0.5"; // 투명도 50%
+      textContainer.style.lineHeight = "1";
+
       const text1 = document.createElement("div");
       text1.textContent = text1Input;
-      text1.className =
-        "absolute left-2 bottom-16 text-orange-500 text-sm leading-tight";
+      text1.className = "text-lg";
+      text1.style.fontSize = "25px";
+      text1.style.fontWeight = "600"; // font-weight 600
 
       const text2 = document.createElement("div");
       text2.textContent = text2Input;
-      text2.className =
-        "absolute left-2 bottom-2 text-orange-500 text-xs leading-tight";
+      text2.className = "text-lg";
+      text2.style.fontSize = "25px";
+
+      textContainer.appendChild(text1);
+      textContainer.appendChild(text2);
 
       imgContainer.appendChild(outputImage);
-      imgContainer.appendChild(text1);
-      imgContainer.appendChild(text2);
+      imgContainer.appendChild(textContainer);
 
       imgContainer.id = `capture-container-${index}`;
 
